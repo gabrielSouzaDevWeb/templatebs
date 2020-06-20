@@ -1,2 +1,11 @@
 @import "_controller/global";
-@import "_controller/nav.scss";
+@import "_controller/mixin";
+
+//middler
+@import "_controller/nav";
+@import "_controller/header";
+@import "_controller/section1";
+
+
+//last
+@import "_controller/ctrl";

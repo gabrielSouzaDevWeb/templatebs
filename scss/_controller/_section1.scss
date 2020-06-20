@@ -1,0 +1,41 @@
+%section1{
+    h2{
+        @include fontSans(2.1em ,400);
+    }
+    hr{opacity: 0.25;width: 95%;margin-left: 0;}
+    p, span{
+        @include fontSans(16px);
+        font-family: sans-serif;
+        opacity: 0.85;
+        line-height: 1.5em;
+    }
+}
+@mixin section() {
+    section{
+        padding: 0 12.5% 0 12.5%;
+        article{
+            float: left;
+            padding: 3% 1% 1% 1%;
+            width: 60%;
+            @extend %section1;
+            a{
+                text-decoration: none;
+                background-color: lighten($color: blue, $amount: 20%);
+                color: white;
+                padding: 2%;
+                border-radius: 5px;
+                @include fontSans(18px,400);
+            }
+        }
+        aside{
+            padding: 3% 1% 1% 1%;
+            width: 30%;
+            float: right;
+            @extend %section1;
+            a{
+                text-decoration: none;
+                color: lighten($color: blue, $amount: 20%);
+            }
+        }
+    }
+}

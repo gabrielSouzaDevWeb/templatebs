@@ -1,0 +1,8 @@
+@mixin fontSans($size, $weight : 300){
+    font:{
+        family: 'Ubuntu', sans-serif;
+        weight: $weight;
+        size: $size;
+    }
+    
+}
