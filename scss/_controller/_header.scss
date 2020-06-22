@@ -1,7 +1,7 @@
 @mixin header(){
     header{
         
-        background-color: lighten($color: blue, $amount: 20%);
+        background-color: $primaryColor;
         width: 100%;
         margin: auto;
         height: 385px;
