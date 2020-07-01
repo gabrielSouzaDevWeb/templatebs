@@ -8,7 +8,7 @@
         margin-top:4%;
         
        div.wrap{
-            @extend %spacinWarp;
+            @extend %spacinWrap;
             padding: 4%;
             span{
                 @include fontSans(16px,300);

@@ -14,8 +14,8 @@
 
 @mixin sections() {
     div.section-1{
-        @extend %spacinWarp;
-        
+        @extend %spacinWrap;
+        clear: both;
         article{
             float: left;
             padding: $boxModelPadding;
@@ -38,14 +38,18 @@
         
     }
     div.section-2{
-        @extend %spacinWarp;
+        //@extend %spacinWrap;
+        clear: both;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 11.5% 0 11.5%;
         div.box{
-             $grey: lighten(grey, 25%);
+            $grey: lighten(grey, 25%);
             width: (100% - 7 ) / 3;
-            margin-right: 2.15%;
+           // margin-right: 2.15%;
             border: 1px solid $grey; 
             /*height: 450px;*/
-            float: left;
+            //float: left;
             border-radius: 5px;
             div.bg{
                 width: 100%;

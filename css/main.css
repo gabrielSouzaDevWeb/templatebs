@@ -1,7 +1,7 @@
 body {
   margin: 0 auto; }
 
-div.section-1, div.section-2, footer div.wrap {
+div.section-1, footer div.wrap {
   padding: 0% 12.5% 0% 12.5%;
   clear: both; }
 
@@ -80,69 +80,74 @@ header {
       font-size: 3.5em; }
     header div.wrap p {
       line-height: 1.5em;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.7);
       font-family: 'Ubuntu', sans-serif;
       font-weight: 300;
       font-size: 18px; }
 
-div.section-1 article {
-  float: left;
-  padding: 2% 1% 5% 0%;
-  width: 60%; }
-  div.section-1 article a {
-    text-decoration: none;
-    background-color: #007BFF;
-    color: white;
-    padding: 2%;
-    border-radius: 5px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
-    font-size: 18px; }
-    div.section-1 article a:hover {
-      background-color: #006fe6; }
-div.section-1 aside {
-  padding: 2% 1% 5% 0%;
-  width: 30%;
-  float: right; }
-  div.section-1 aside a {
-    text-decoration: none;
-    color: #007BFF; }
-
-div.section-2 div.box {
-  width: 31%;
-  margin-right: 2.15%;
-  border: 1px solid silver;
-  /*height: 450px;*/
-  float: left;
-  border-radius: 5px; }
-  div.section-2 div.box div.bg {
-    width: 100%;
-    height: 225px;
-    background-color: silver;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
-  div.section-2 div.box div.text {
-    padding: 2% 6% 2% 6%; }
-  div.section-2 div.box h3 {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    font-size: 1.3em;
-    margin-left: 1%; }
-  div.section-2 div.box div.btn {
-    padding: 6%;
-    border-top: 1px solid silver;
-    background-color: #f8f8f8; }
-    div.section-2 div.box div.btn a {
+div.section-1 {
+  clear: both; }
+  div.section-1 article {
+    float: left;
+    padding: 2% 1% 5% 0%;
+    width: 60%; }
+    div.section-1 article a {
       text-decoration: none;
       background-color: #007BFF;
       color: white;
-      padding: 3%;
-      border-radius: 3px;
+      padding: 2%;
+      border-radius: 5px;
       font-family: 'Ubuntu', sans-serif;
       font-weight: 400;
-      font-size: 16px; }
-      div.section-2 div.box div.btn a:hover {
+      font-size: 18px; }
+      div.section-1 article a:hover {
         background-color: #006fe6; }
+  div.section-1 aside {
+    padding: 2% 1% 5% 0%;
+    width: 30%;
+    float: right; }
+    div.section-1 aside a {
+      text-decoration: none;
+      color: #007BFF; }
+
+div.section-2 {
+  clear: both;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 11.5% 0 11.5%; }
+  div.section-2 div.box {
+    width: 31%;
+    border: 1px solid silver;
+    /*height: 450px;*/
+    border-radius: 5px; }
+    div.section-2 div.box div.bg {
+      width: 100%;
+      height: 225px;
+      background-color: silver;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    div.section-2 div.box div.text {
+      padding: 2% 6% 2% 6%; }
+    div.section-2 div.box h3 {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 500;
+      font-size: 1.3em;
+      margin-left: 1%; }
+    div.section-2 div.box div.btn {
+      padding: 6%;
+      border-top: 1px solid silver;
+      background-color: #f8f8f8; }
+      div.section-2 div.box div.btn a {
+        text-decoration: none;
+        background-color: #007BFF;
+        color: white;
+        padding: 3%;
+        border-radius: 3px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        font-size: 16px; }
+        div.section-2 div.box div.btn a:hover {
+          background-color: #006fe6; }
 
 footer {
   background-color: #343A40;

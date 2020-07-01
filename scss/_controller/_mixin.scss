@@ -2,18 +2,11 @@
 $primaryColor: #007BFF;
 $boxModelPadding:2% 1% 5% 0%;
 //lighten($color: blue, $amount: 20%)
-%spacinWarp{
+%spacinWrap{
     padding: 0% 12.5% 0% 12.5%;
     clear: both;
 }
-@mixin fontSans($size, $weight : 300){
-    font:{
-        family: 'Ubuntu', sans-serif;
-        weight: $weight;
-        size: $size;
-    }
-    
-}
+
 @mixin btn($btnColor : $primaryColor, $padding: 2%,$fontSize : 18px, $radius : 5px){
     text-decoration: none;
     background-color: $btnColor;
@@ -24,4 +17,12 @@ $boxModelPadding:2% 1% 5% 0%;
     &:hover{
         background-color: darken($btnColor, 5%);
     }
+}
+@mixin fontSans($size, $weight : 300){
+    font:{
+        family: 'Ubuntu', sans-serif;
+        weight: $weight;
+        size: $size;
+    }
+    
 }
