@@ -26,54 +26,67 @@ nav {
 
 nav {
   width: 100%;
-  height: 55px;
   position: fixed; }
   nav div.nav-limit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 75%;
+    height: 55px;
     margin: auto; }
     nav div.nav-limit span.logo {
       font-family: 'Ubuntu', sans-serif;
       font-weight: 300;
       font-size: 22px;
       color: white;
-      position: relative;
-      top: 15px; }
-    nav div.nav-limit ul {
-      margin: auto auto;
-      float: right;
-      position: relative;
-      top: 20px;
-      right: 20px; }
-      nav div.nav-limit ul li {
-        display: inline-block;
-        line-height: 0; }
-        nav div.nav-limit ul li a {
-          line-height: 0;
-          text-decoration: none;
-          margin: 0 10px 0 0;
-          font-family: 'Ubuntu', sans-serif;
-          font-weight: 300;
-          font-size: 15px;
-          text-transform: capitalize;
-          color: rgba(255, 255, 255, 0.75); }
-          nav div.nav-limit ul li a#active {
-            color: white; }
-          nav div.nav-limit ul li a:hover, nav div.nav-limit ul li a:focus {
-            color: rgba(255, 255, 255, 0.9); }
+      /*position: relative;
+      top: 15px;*/ }
+    nav div.nav-limit div.btn-menu-svg {
+      display: none; }
+    nav div.nav-limit ul li {
+      display: inline;
+      line-height: 0; }
+      nav div.nav-limit ul li a {
+        line-height: 0;
+        text-decoration: none;
+        margin: 0 10px 0 0;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(255, 255, 255, 0.75); }
+        nav div.nav-limit ul li a#active {
+          color: white; }
+        nav div.nav-limit ul li a:hover, nav div.nav-limit ul li a:focus {
+          color: rgba(255, 255, 255, 0.9); }
 
+@media only screen and (min-width: 512px) and (max-width: 900px) {
+  div.btn-menu-svg {
+    display: none; } }
+@media only screen and (max-width: 512px) {
+  div.nav-limit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    div.nav-limit div.btn-menu-svg {
+      display: block; }
+    div.nav-limit span.logo {
+      position: relative;
+      top: 0px; }
+    div.nav-limit ul {
+      display: none; } }
 header {
-  background-color: #007BFF;
+  background-color: green;
   width: 100%;
   margin: auto;
-  height: 385px; }
+  min-height: 385px; }
   header div.wrap {
     width: 75%;
     margin: auto;
     padding-top: 80px; }
     header div.wrap h1 {
-      margin-top: 1.9em;
+      margin-top: 1em;
       color: white;
-      line-height: 0;
       /*margin: auto;*/
       font-family: 'Ubuntu', sans-serif;
       font-weight: 300;
@@ -93,7 +106,7 @@ div.section-1 {
     width: 60%; }
     div.section-1 article a {
       text-decoration: none;
-      background-color: #007BFF;
+      background-color: green;
       color: white;
       padding: 2%;
       border-radius: 5px;
@@ -101,28 +114,35 @@ div.section-1 {
       font-weight: 400;
       font-size: 18px; }
       div.section-1 article a:hover {
-        background-color: #006fe6; }
+        background-color: #006700; }
   div.section-1 aside {
     padding: 2% 1% 5% 0%;
     width: 30%;
     float: right; }
     div.section-1 aside a {
       text-decoration: none;
-      color: #007BFF; }
+      color: green; }
 
+@media only screen and (max-width: 512px) {
+  div.section-1 {
+    display: flex;
+    flex-flow: column wrap; }
+    div.section-1 article {
+      width: 100%; }
+    div.section-1 aside {
+      width: 100%; } }
 div.section-2 {
   clear: both;
   display: flex;
   justify-content: space-around;
   padding: 0 11.5% 0 11.5%; }
   div.section-2 div.box {
-    width: 31%;
+    margin-right: 2.15%;
     border: 1px solid silver;
-    /*height: 450px;*/
     border-radius: 5px; }
     div.section-2 div.box div.bg {
       width: 100%;
-      height: 225px;
+      height: 200px;
       background-color: silver;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px; }
@@ -139,7 +159,7 @@ div.section-2 {
       background-color: #f8f8f8; }
       div.section-2 div.box div.btn a {
         text-decoration: none;
-        background-color: #007BFF;
+        background-color: green;
         color: white;
         padding: 3%;
         border-radius: 3px;
@@ -147,8 +167,28 @@ div.section-2 {
         font-weight: 400;
         font-size: 16px; }
         div.section-2 div.box div.btn a:hover {
-          background-color: #006fe6; }
+          background-color: #006700; }
 
+@media only screen and (min-width: 512px) and (max-width: 900px) {
+  div.section-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between; }
+    div.section-2 div.box {
+      width: 46.5%;
+      margin-top: 5%; }
+      div.section-2 div.box:nth-child(3), div.section-2 div.box:nth-child(4) {
+        margin-top: 8%; } }
+@media only screen and (max-width: 512px) {
+  div.section-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between; }
+    div.section-2 div.box {
+      width: 93%;
+      margin-top: 8%; } }
 footer {
   background-color: #343A40;
   float: left;
