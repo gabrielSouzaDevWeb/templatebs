@@ -21,10 +21,13 @@ div.section-1 article p, div.section-1 aside p, div.section-2 div.box p, div.sec
   opacity: 0.85;
   line-height: 1.5em; }
 
+/*@if ($bgColor == red, black, blue){
+     nav{background-color: lighten($bgColor, 16%) ;} 
+ } @else{
+     nav{background-color: $bgColor;} 
+ }*/
 nav {
-  background-color: #3e3e3e; }
-
-nav {
+  background-color: #222222;
   width: 100%;
   z-index: 2;
   position: fixed; }
@@ -56,34 +59,65 @@ nav {
         font-size: 15px;
         text-transform: capitalize;
         color: rgba(255, 255, 255, 0.75); }
-        nav div.nav-limit ul li a#active {
+        nav div.nav-limit ul li a.active {
           color: white; }
         nav div.nav-limit ul li a:hover, nav div.nav-limit ul li a:focus {
           color: rgba(255, 255, 255, 0.9); }
+  nav ul.menu-mobile {
+    display: none; }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  div.btn-menu-svg {
-    display: none;
-    float: right;
-    padding: 10px 12px 6px 12px;
-    margin-top: 10px;
-    margin-right: 25px;
-    border: 1px solid #333;
-    border-radius: 3px; }
-    div.btn-menu-svg:hover {
-      background-color: #3b3b3b; } }
+/*@media only screen and (min-width:600px) and (max-width: 900px){
+    div.btn-menu-svg{  
+        display: none;
+        float: right;
+        padding: 10px 12px 6px 12px;
+        margin-top: 10px;
+        margin-right: 25px;
+        border:1px solid #333;
+        border-radius: 50px;
+        &:hover{
+            background-color: lighten(#151515, 15%);
+        }
+        
+    }
+}*/
 @media only screen and (max-width: 600px) {
-  div.nav-limit {
+  nav div.nav-limit {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    div.nav-limit div.btn-menu-svg {
-      display: block; }
-    div.nav-limit span.logo {
+    nav div.nav-limit div.btn-menu-svg {
+      display: block;
+      padding: 5px 6px 2px 6px;
+      border-radius: 5px;
+      border: 1px solid #272727; }
+      nav div.nav-limit div.btn-menu-svg:focus {
+        background-color: #2f2f2f; }
+    nav div.nav-limit span.logo {
       position: relative;
       top: 0px; }
-    div.nav-limit ul {
-      display: none; } }
+    nav div.nav-limit ul {
+      display: none; }
+  nav ul.menu-mobile {
+    padding: 0;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none; }
+    nav ul.menu-mobile li a {
+      line-height: 0;
+      text-decoration: none;
+      margin: 0 10px 0 0;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      text-transform: capitalize;
+      color: rgba(255, 255, 255, 0.75); }
+      nav ul.menu-mobile li a.active {
+        color: white; }
+      nav ul.menu-mobile li a:hover, nav ul.menu-mobile li a:focus {
+        color: rgba(255, 255, 255, 0.9); } }
 header {
   background-color: green;
   width: 100%;

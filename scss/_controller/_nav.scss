@@ -1,12 +1,12 @@
 @mixin nav($bgColor, $colortext:white){
-    $lightColors: (red, black, blue );
-    @if ($bgColor == #{$lightColors}){
+   $lightColors: (red, black, blue );
+   /*@if ($bgColor == #{$lightColors}){
         nav{background-color: lighten($bgColor, 16%) ;} 
     } @else{
         nav{background-color: $bgColor;} 
-    }
+    }*/
     nav{   
-        
+        background-color: lighten($color: $bgColor, $amount: 5%);
         width: 100%;
         z-index: 2;
         position: fixed;
@@ -33,25 +33,17 @@
                     display: inline;
                     line-height: 0;
                     a{
-                        line-height: 0;
-                        text-decoration: none;
-                        margin: 0 10px 0 0;
-                        @include fontSans(15px);
-                        text-transform: capitalize;
-                        color: change-color($color : $colortext, $alpha: 0.75);
-                        &#active{
-                            color: $colortext;
-                        }
-                        &:hover, &:focus{
-                            color:change-color($color : $colortext, $alpha: 0.9);
-                        }
+                        @include menuLink($colortext);
                     }
                 }
             }
             
         }
+        ul.menu-mobile{
+            display: none;
+        }
     }
-    @media only screen and (min-width:600px) and (max-width: 900px){
+    /*@media only screen and (min-width:600px) and (max-width: 900px){
         div.btn-menu-svg{  
             display: none;
             float: right;
@@ -59,28 +51,55 @@
             margin-top: 10px;
             margin-right: 25px;
             border:1px solid #333;
-            border-radius: 3px;
+            border-radius: 50px;
             &:hover{
                 background-color: lighten(#151515, 15%);
             }
             
         }
-    }
+    }*/
     @media only screen and (max-width:600px){
-        div.nav-limit{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            div.btn-menu-svg{
-                display: block;
+        nav{
+            div.nav-limit{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div.btn-menu-svg{
+                    display: block;
+                    //padding:1.5% 2% 0.5% 1.7%;
+                    padding: 5px 6px 2px 6px;
+                    border-radius: 5px;
+                    border: 1px solid lighten($bgColor, 7%);
+                    &:focus{
+                        background-color: lighten($bgColor, 10%);
+                        
+                    }
+                    
+                }
+                span.logo{
+                    position: relative;
+                    top: 0px;
+                }
+                ul{
+                    display: none;
+                }
+                
             }
-            span.logo{
-                position: relative;
-                top: 0px;
-            }
-            ul{
+            ul.menu-mobile{
+                padding:0; 
                 display: none;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                list-style: none;
+                li{
+                    a{
+                        @include menuLink($colortext);
+                    }
+                }
+                
             }
-        }   
-    }  
+               
+        }     
+    }
 }

@@ -26,3 +26,17 @@ $boxModelPadding:2% 1% 5% 0%;
     }
     
 }
+@mixin menuLink($colortext){
+    line-height: 0;
+    text-decoration: none;
+    margin: 0 10px 0 0;
+    @include fontSans(15px);
+    text-transform: capitalize;
+    color: change-color($color : $colortext, $alpha: 0.75);
+    &.active{
+        color: $colortext;
+    }
+    &:hover, &:focus{
+        color:change-color($color : $colortext, $alpha: 0.9);
+    }
+}
