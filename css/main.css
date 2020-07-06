@@ -26,6 +26,7 @@ nav {
 
 nav {
   width: 100%;
+  z-index: 2;
   position: fixed; }
   nav div.nav-limit {
     display: flex;
@@ -60,10 +61,18 @@ nav {
         nav div.nav-limit ul li a:hover, nav div.nav-limit ul li a:focus {
           color: rgba(255, 255, 255, 0.9); }
 
-@media only screen and (min-width: 512px) and (max-width: 900px) {
+@media only screen and (min-width: 600px) and (max-width: 900px) {
   div.btn-menu-svg {
-    display: none; } }
-@media only screen and (max-width: 512px) {
+    display: none;
+    float: right;
+    padding: 10px 12px 6px 12px;
+    margin-top: 10px;
+    margin-right: 25px;
+    border: 1px solid #333;
+    border-radius: 3px; }
+    div.btn-menu-svg:hover {
+      background-color: #3b3b3b; } }
+@media only screen and (max-width: 600px) {
   div.nav-limit {
     display: flex;
     justify-content: space-between;
