@@ -2,20 +2,10 @@ function index() {
 
     var menu_bar = document.querySelector(".btn-menu-svg");
     var menu_mobile= document.querySelector(".menu-mobile");
-    menu_mobile.style.display = "none";
-    
-    if (widthDisplay() <= 600) {
-        menu_bar.style.display = "block";
-        
-        console.log("<");
-    } else{
-        menu_bar.style.display = "none";
-        menu_mobile.style.display= "none";
-        console.log(">");
-    }
 
     menu_bar.addEventListener("click",function(){
        toggleDisplay(menu_mobile, "flex"); 
+       
     });
 
     window.addEventListener("resize",function(){
@@ -38,6 +28,7 @@ function index() {
             console.log("<");
         } else{
             item.style.display = "none";
+            menu_mobile.style.display="none";
             console.log(">");
         }
     }
