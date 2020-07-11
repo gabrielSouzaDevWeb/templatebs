@@ -90,7 +90,7 @@ nav {
       display: block;
       padding: 5px 6px 2px 6px;
       border-radius: 5px;
-      border: 1px solid #272727; }
+      border: 1px solid rgba(255, 255, 255, 0.2); }
       nav div.nav-limit div.btn-menu-svg:focus {
         background-color: #2f2f2f; }
     nav div.nav-limit span.logo {
