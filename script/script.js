@@ -17,7 +17,7 @@ function index() {
 
     window.addEventListener("scroll", function() {
         var getStyle = document.defaultView.getComputedStyle(header_bg, null).backgroundColor;
-        if(window.scrollY >= 340 && widthDisplay() >= 600){
+        if(window.scrollY >= 340){
             nav_bar.style.backgroundColor = "#151515";
             
             
