@@ -7,7 +7,7 @@ function index() {
     var header_bg= document.querySelector(".header");
     var header_bgcolor= document.defaultView.getComputedStyle(header_bg, null).backgroundColor;
 
-    //nav_bar.style.backgroundColor = header_bgcolor;
+    nav_bar.style.backgroundColor = header_bgcolor;
 
     menu_bar.addEventListener("click",function(){
        toggleDisplay(menu_mobile, "flex"); 
