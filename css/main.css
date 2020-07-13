@@ -27,7 +27,7 @@ div.section-1 article p, div.section-1 aside p, div.section-2 div.box p, div.sec
      nav{background-color: $bgColor;} 
  }*/
 nav {
-  background-color: #222222;
+  background-color: green;
   width: 100%;
   z-index: 2;
   position: fixed; }

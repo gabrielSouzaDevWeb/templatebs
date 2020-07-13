@@ -6,7 +6,8 @@
         nav{background-color: $bgColor;} 
     }*/
     nav{   
-        background-color: lighten($color: $bgColor, $amount: 5%);
+        background-color:$primaryColor;
+        //lighten($color: $bgColor, $amount: 5%)
         width: 100%;
         z-index: 2;
         position: fixed;
