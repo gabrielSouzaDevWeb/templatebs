@@ -1,9 +1,13 @@
+//var start_color= function(){ nav_bar.style.backgroundColor = header_bgcolor;}
 function index() {
 
-    var menu_bar = document.querySelector(".btn-menu-svg");
+    var menu_bar= document.querySelector(".btn-menu-svg");
     var menu_mobile= document.querySelector(".menu-mobile");
     var nav_bar= document.querySelector(".nav-bar");
     var header_bg= document.querySelector(".header");
+    var header_bgcolor= document.defaultView.getComputedStyle(header_bg, null).backgroundColor;
+
+    //nav_bar.style.backgroundColor = header_bgcolor;
 
     menu_bar.addEventListener("click",function(){
        toggleDisplay(menu_mobile, "flex"); 
@@ -13,16 +17,16 @@ function index() {
         toCompareWidth(menu_bar);
     });
 
-    window.addEventListener("onload",function(){ nav_bar.style.backgroundColor = document.defaultView.getComputedStyle(header_bg, null).backgroundColor});
+    //window.addEventListener("load",function(){ nav_bar.style.backgroundColor = header_bgcolor;});
 
     window.addEventListener("scroll", function() {
-        var getStyle = document.defaultView.getComputedStyle(header_bg, null).backgroundColor;
+        //var getStyle = document.defaultView.getComputedStyle(header_bg, null).backgroundColor;
         if(window.scrollY >= 340){
             nav_bar.style.backgroundColor = "#151515";
             
             
         }else{
-            nav_bar.style.backgroundColor = getStyle;
+            nav_bar.style.backgroundColor = header_bgcolor;
         }
     });
 
@@ -63,9 +67,5 @@ function index() {
     }*/
 
 }
-
-
-
-
 
 window.onload = index;
