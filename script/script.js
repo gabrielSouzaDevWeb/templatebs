@@ -17,20 +17,15 @@ function index() {
         toCompareWidth(menu_bar);
     });
 
-    //window.addEventListener("load",function(){ nav_bar.style.backgroundColor = header_bgcolor;});
-
     window.addEventListener("scroll", function() {
-        //var getStyle = document.defaultView.getComputedStyle(header_bg, null).backgroundColor;
         if(window.scrollY >= 340){
             nav_bar.style.backgroundColor = "#151515";
-            
-            
         }else{
             nav_bar.style.backgroundColor = header_bgcolor;
         }
     });
 
-    function toggleDisplay(tagToggle,displayValue){//documentar function e trocar nome
+    function toggleDisplay(tagToggle,displayValue){//documentar function e trocar nome !important
         
         var toggleDisplay = window.getComputedStyle(tagToggle, null).getPropertyValue("display");
         if(toggleDisplay == displayValue){
@@ -58,14 +53,6 @@ function index() {
             return document.body;
         }
     }
-
-    /*function getStyle(tagName,style) {
-        var getStyle= document.defaultView.getComputedStyle(tagName, null).style;
-        var unitTest = console.log("getStyle");
-        return getStyle, unitTest;
-        
-    }*/
-
 }
 
 window.onload = index;
